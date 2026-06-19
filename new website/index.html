@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rosevow - Premium artificial jewellery that redefines elegance. Shop rings, necklaces, earrings, bracelets & curated gift sets. Tarnish-free guarantee, free shipping above ₹999.">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Rosevow | Premium Artificial Jewellery — Elegance Redefined">
+  <meta property="og:description" content="Rosevow - Premium artificial jewellery that redefines elegance. Shop rings, necklaces, earrings, bracelets & curated gift sets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rosevow.com">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rosevow | Premium Artificial Jewellery — Elegance Redefined">
+  <meta name="twitter:description" content="Rosevow - Premium artificial jewellery that redefines elegance. Shop rings, necklaces, earrings, bracelets & curated gift sets.">
+
+  <title>Rosevow | Premium Artificial Jewellery — Elegance Redefined</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ==================== ANNOUNCEMENT BAR ==================== -->
+  <div class="announcement-bar">
+    <div class="announcement-track">
+      <span>✨ Free Shipping Above ₹999</span>
+      <span>🛡️ Tarnish-Free Guarantee</span>
+      <span>🔄 7-Day Easy Returns</span>
+      <span>💰 COD Available</span>
+      <span>✨ Free Shipping Above ₹999</span>
+      <span>🛡️ Tarnish-Free Guarantee</span>
+      <span>🔄 7-Day Easy Returns</span>
+      <span>💰 COD Available</span>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <!-- Mobile hamburger -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <span class="logo__name">ROSEVOW</span>
+        <span class="logo__tagline">Elegance Redefined</span>
+      </a>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="main-nav__list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="category.html?cat=rings">Rings</a></li>
+          <li><a href="category.html?cat=necklaces">Necklaces</a></li>
+          <li><a href="category.html?cat=earrings">Earrings</a></li>
+          <li><a href="category.html?cat=bracelets">Bracelets</a></li>
+          <li><a href="category.html?cat=gifts">Gifts</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="wishlist.html" class="icon-btn wishlist-icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <span class="wishlist-badge" id="wishlistCount" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="icon-btn cart-icon-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="container">
+      <div class="search-overlay__inner">
+        <input type="text" id="searchInput" placeholder="Search for rings, necklaces, earrings..." autocomplete="off">
+        <button id="searchClose" aria-label="Close search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="heroSection">
+    <!-- Slide 1 -->
+    <div class="hero__slide active">
+      <div class="hero__slide-bg" style="background: url('images/hero1.png') center/cover no-repeat;"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="hero__badge">✦ New Collection 2026 ✦</p>
+        <h1 class="hero__title">Where Elegance Meets Affordability</h1>
+        <p class="hero__subtitle">Discover handcrafted jewellery that shines as bright as you do</p>
+        <div class="hero__actions">
+          <a href="category.html" class="btn btn--primary btn--lg">Shop Now</a>
+          <a href="#categories" class="btn btn--outline btn--lg" style="border-color: white; color: white;">Explore Collection</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero__slide">
+      <div class="hero__slide-bg" style="background: url('images/hero2.png') center/cover no-repeat;"></div>
+      <div class="hero__overlay" style="background: linear-gradient(135deg, rgba(26,26,46,0.7), rgba(109,33,79,0.4));"></div>
+      <div class="hero__content">
+        <p class="hero__badge">✦ Trending ✦</p>
+        <h1 class="hero__title">Adorn Yourself with Rosevow</h1>
+        <p class="hero__subtitle">Premium quality artificial jewellery, tarnish-free guarantee</p>
+        <div class="hero__actions">
+          <a href="category.html?cat=trending" class="btn btn--primary btn--lg">View Trending</a>
+          <a href="https://wa.me/916239493835" class="btn btn--whatsapp btn--lg" target="_blank">💬 WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero__slide">
+      <div class="hero__slide-bg" style="background: url('images/hero3.png') center/cover no-repeat;"></div>
+      <div class="hero__overlay" style="background: linear-gradient(135deg, rgba(201,162,39,0.5), rgba(109,33,79,0.6));"></div>
+      <div class="hero__content">
+        <p class="hero__badge">✦ Gift Sets ✦</p>
+        <h1 class="hero__title">The Perfect Gift for Every Occasion</h1>
+        <p class="hero__subtitle">Curated gift boxes that make moments unforgettable</p>
+        <div class="hero__actions">
+          <a href="category.html?cat=gifts" class="btn btn--accent btn--lg">Shop Gifts</a>
+          <a href="about.html" class="btn btn--outline btn--lg" style="border-color: white; color: white;">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dot Navigation -->
+    <div class="hero__dots">
+      <button class="hero__dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main>
+
+    <!-- ==================== CATEGORY SHOWCASE ==================== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">Shop by Category</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Find your perfect piece from our curated collections</p>
+        </div>
+        <div class="category-grid">
+          <a href="category.html?cat=rings" class="category-card animate-on-scroll stagger-1">
+            <div class="category-card__image" style="background: url('images/ring.png') center/cover no-repeat;"></div>
+            <div class="category-card__overlay">
+              <div>
+                <h3 class="category-card__name">Rings</h3>
+                <p class="category-card__count">120+ Designs</p>
+              </div>
+            </div>
+          </a>
+          <a href="category.html?cat=necklaces" class="category-card animate-on-scroll stagger-2">
+            <div class="category-card__image" style="background: url('images/necklace.png') center/cover no-repeat;"></div>
+            <div class="category-card__overlay">
+              <div>
+                <h3 class="category-card__name">Necklaces</h3>
+                <p class="category-card__count">200+ Designs</p>
+              </div>
+            </div>
+          </a>
+          <a href="category.html?cat=earrings" class="category-card animate-on-scroll stagger-3">
+            <div class="category-card__image" style="background: url('images/earrings.png') center/cover no-repeat;"></div>
+            <div class="category-card__overlay">
+              <div>
+                <h3 class="category-card__name">Earrings</h3>
+                <p class="category-card__count">180+ Designs</p>
+              </div>
+            </div>
+          </a>
+          <a href="category.html?cat=bracelets" class="category-card animate-on-scroll stagger-4">
+            <div class="category-card__image" style="background: url('images/bracelet.png') center/cover no-repeat;"></div>
+            <div class="category-card__overlay">
+              <div>
+                <h3 class="category-card__name">Bracelets</h3>
+                <p class="category-card__count">90+ Designs</p>
+              </div>
+            </div>
+          </a>
+          <a href="category.html?cat=gifts" class="category-card animate-on-scroll stagger-5">
+            <div class="category-card__image" style="background: url('images/gifts.png') center/cover no-repeat;"></div>
+            <div class="category-card__overlay">
+              <div>
+                <h3 class="category-card__name">Gift Sets</h3>
+                <p class="category-card__count">50+ Curated Sets</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRENDING NOW ==================== -->
+    <section class="section" id="trending">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">Trending Now</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Our most loved pieces this season</p>
+        </div>
+        <div class="products-grid" id="trendingProducts" data-category="trending">
+
+          <!-- Product Card 1 -->
+          <article class="product-card animate-on-scroll stagger-1" data-product-id="1">
+            <div class="product-card__image-wrap">
+              <div class="product-card__img" style="background: linear-gradient(135deg, #f5e6d3, #e8d5c4, #dbc4b0);"></div>
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--bestseller">Bestseller</span>
+              </div>
+              <button class="product-card__wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__brand">Rosevow</p>
+              <h3 class="product-card__name">Eternal Rose Gold Ring</h3>
+              <div class="product-card__price-row">
+                <span class="product-card__price">₹1,299</span>
+                <span class="product-card__original-price">₹2,499</span>
+                <span class="product-card__discount">48% off</span>
+              </div>
+              <div class="product-card__rating">
+                <span class="product-card__stars">★★★★★</span>
+                <span>(128)</span>
+              </div>
+              <button class="product-card__add-btn">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card animate-on-scroll stagger-2" data-product-id="2">
+            <div class="product-card__image-wrap">
+              <div class="product-card__img" style="background: linear-gradient(135deg, #e8d5e0, #d4b8c8, #c19ab0);"></div>
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--new">New</span>
+              </div>
+              <button class="product-card__wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__brand">Rosevow</p>
+              <h3 class="product-card__name">Pearl Cascade Necklace</h3>
+              <div class="product-card__price-row">
+                <span class="product-card__price">₹1,899</span>
+                <span class="product-card__original-price">₹3,299</span>
+                <span class="product-card__discount">42% off</span>
+              </div>
+              <div class="product-card__rating">
+                <span class="product-card__stars">★★★★★</span>
+                <span>(95)</span>
+              </div>
+              <button class="product-card__add-btn">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card animate-on-scroll stagger-3" data-product-id="3">
+            <div class="product-card__image-wrap">
+              <div class="product-card__img" style="background: linear-gradient(135deg, #f0e4d7, #e5d4c0, #d4c0a8);"></div>
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--sale">Sale</span>
+              </div>
+              <button class="product-card__wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__brand">Rosevow</p>
+              <h3 class="product-card__name">Diamond Dust Studs</h3>
+              <div class="product-card__price-row">
+                <span class="product-card__price">₹899</span>
+                <span class="product-card__original-price">₹1,699</span>
+                <span class="product-card__discount">47% off</span>
+              </div>
+              <div class="product-card__rating">
+                <span class="product-card__stars">★★★★☆</span>
+                <span>(67)</span>
+              </div>
+              <button class="product-card__add-btn">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card animate-on-scroll stagger-4" data-product-id="4">
+            <div class="product-card__image-wrap">
+              <div class="product-card__img" style="background: linear-gradient(135deg, #dde8e4, #c5d5cf, #a8bfb5);"></div>
+              <div class="product-card__badges">
+                <span class="product-card__badge product-card__badge--bestseller">Bestseller</span>
+              </div>
+              <button class="product-card__wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="product-card__info">
+              <p class="product-card__brand">Rosevow</p>
+              <h3 class="product-card__name">Venetian Chain Bracelet</h3>
+              <div class="product-card__price-row">
+                <span class="product-card__price">₹1,499</span>
+                <span class="product-card__original-price">₹2,799</span>
+                <span class="product-card__discount">46% off</span>
+              </div>
+              <div class="product-card__rating">
+                <span class="product-card__stars">★★★★★</span>
+                <span>(112)</span>
+              </div>
+              <button class="product-card__add-btn">Add to Cart</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY ROSEVOW (TRUST SECTION) ==================== -->
+    <section class="section trust-section" id="whyRosevow">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">Why Choose Rosevow</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Crafted with love, designed for you</p>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-card animate-on-scroll stagger-1">
+            <div class="trust-card__icon">✨</div>
+            <h3 class="trust-card__title">Tarnish-Free</h3>
+            <p class="trust-card__desc">Premium anti-tarnish coating on every piece</p>
+          </div>
+          <div class="trust-card animate-on-scroll stagger-2">
+            <div class="trust-card__icon">🛡️</div>
+            <h3 class="trust-card__title">Skin Safe</h3>
+            <p class="trust-card__desc">Hypoallergenic, anti-allergic materials</p>
+          </div>
+          <div class="trust-card animate-on-scroll stagger-3">
+            <div class="trust-card__icon">🔄</div>
+            <h3 class="trust-card__title">Easy Returns</h3>
+            <p class="trust-card__desc">7-day hassle-free return policy</p>
+          </div>
+          <div class="trust-card animate-on-scroll stagger-4">
+            <div class="trust-card__icon">📦</div>
+            <h3 class="trust-card__title">Cash on Delivery</h3>
+            <p class="trust-card__desc">Pay when you receive your order</p>
+          </div>
+          <div class="trust-card animate-on-scroll stagger-5">
+            <div class="trust-card__icon">🚚</div>
+            <h3 class="trust-card__title">Free Shipping</h3>
+            <p class="trust-card__desc">Complimentary on orders above ₹999</p>
+          </div>
+          <div class="trust-card animate-on-scroll stagger-6">
+            <div class="trust-card__icon">⭐</div>
+            <h3 class="trust-card__title">10,000+ Reviews</h3>
+            <p class="trust-card__desc">Trusted by thousands of happy customers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SIGNATURE COLLECTIONS ==================== -->
+    <section class="section" id="collectionsSection">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">Signature Collections</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Explore our handpicked curation of fine designs</p>
+        </div>
+        <div class="collections-grid">
+
+          <!-- Collection Card 1 -->
+          <div class="collection-card animate-on-scroll stagger-1" onclick="window.location.href='category.html?cat=rings'">
+            <div class="collection-card__bg" style="background: url('images/ring.png') center/cover no-repeat;"></div>
+            <div class="collection-card__content">
+              <h3 class="collection-card__title">Daily Rings</h3>
+              <p class="collection-card__desc">Premium anti-tarnish rings for everyday wear.</p>
+              <span class="btn btn--accent btn--sm">Explore Collection</span>
+            </div>
+          </div>
+
+          <!-- Collection Card 2 -->
+          <div class="collection-card animate-on-scroll stagger-2" onclick="window.location.href='category.html?cat=necklaces'">
+            <div class="collection-card__bg" style="background: url('images/necklace.png') center/cover no-repeat;"></div>
+            <div class="collection-card__content">
+              <h3 class="collection-card__title">Royal Necklaces</h3>
+              <p class="collection-card__desc">Exquisite crystal & gold necklaces for celebrations.</p>
+              <span class="btn btn--accent btn--sm">Explore Collection</span>
+            </div>
+          </div>
+
+          <!-- Collection Card 3 -->
+          <div class="collection-card animate-on-scroll stagger-3" onclick="window.location.href='category.html?cat=earrings'">
+            <div class="collection-card__bg" style="background: url('images/earrings.png') center/cover no-repeat;"></div>
+            <div class="collection-card__content">
+              <h3 class="collection-card__title">Classic Earrings</h3>
+              <p class="collection-card__desc">Lustrous freshwater pearl studs and drop earrings.</p>
+              <span class="btn btn--accent btn--sm">Explore Collection</span>
+            </div>
+          </div>
+
+          <!-- Collection Card 4 -->
+          <div class="collection-card animate-on-scroll stagger-4" onclick="window.location.href='category.html?cat=bracelets'">
+            <div class="collection-card__bg" style="background: url('images/bracelet.png') center/cover no-repeat;"></div>
+            <div class="collection-card__content">
+              <h3 class="collection-card__title">Charming Bracelets</h3>
+              <p class="collection-card__desc">Elegant crystal tennis bracelets and stackable bangles.</p>
+              <span class="btn btn--accent btn--sm">Explore Collection</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">What Our Customers Say</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Real reviews from real customers</p>
+        </div>
+        <div class="testimonial-carousel">
+
+          <div class="testimonial-card animate-on-scroll stagger-1">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"I was skeptical about ordering jewellery online, but Rosevow completely exceeded my expectations! The necklace looks exactly like real gold, and I've received so many compliments. The quality is outstanding for the price."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">PS</div>
+              <div>
+                <p class="testimonial-card__name">Priya Sharma</p>
+                <p class="testimonial-card__location">Mumbai</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll stagger-2">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"The earrings I bought for my sister's wedding were absolutely stunning. Everyone thought they were real diamonds! The tarnish-free coating actually works — still looks brand new after months of wear."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AP</div>
+              <div>
+                <p class="testimonial-card__name">Ananya Patel</p>
+                <p class="testimonial-card__location">Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-on-scroll stagger-3">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">"Best artificial jewellery brand I've come across. The packaging is premium, delivery was fast, and the bracelet is gorgeous. Already ordered three more pieces for my collection!"</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">MK</div>
+              <div>
+                <p class="testimonial-card__name">Meera Krishnan</p>
+                <p class="testimonial-card__location">Bangalore</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INSTAGRAM SECTION ==================== -->
+    <section class="section" id="instagram">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">Follow @rosevow</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle">Join our community of jewellery lovers</p>
+        </div>
+      </div>
+      <div class="instagram-grid">
+        <div class="instagram-item animate-on-scroll stagger-1">
+          <div style="width:100%;height:100%;background:url('images/social_ring.png') center/cover no-repeat;"></div>
+        </div>
+        <div class="instagram-item animate-on-scroll stagger-2">
+          <div style="width:100%;height:100%;background:url('images/social_necklace.png') center/cover no-repeat;"></div>
+        </div>
+        <div class="instagram-item animate-on-scroll stagger-3">
+          <div style="width:100%;height:100%;background:url('images/social_earrings.png') center/cover no-repeat;"></div>
+        </div>
+        <div class="instagram-item animate-on-scroll stagger-4">
+          <div style="width:100%;height:100%;background:url('images/social_bracelet.png') center/cover no-repeat;"></div>
+        </div>
+        <div class="instagram-item animate-on-scroll stagger-5">
+          <div style="width:100%;height:100%;background:url('images/social_flatlay.png') center/cover no-repeat;"></div>
+        </div>
+        <div class="instagram-item animate-on-scroll stagger-6">
+          <div style="width:100%;height:100%;background:url('images/social_model.png') center/cover no-repeat;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title" style="color: white;">Stay in the Loop</h2>
+          <div class="section__divider"></div>
+          <p class="section__subtitle" style="color: rgba(255,255,255,0.8);">Subscribe for exclusive offers, new arrivals & styling tips</p>
+        </div>
+        <form class="newsletter-form animate-on-scroll">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn--accent">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="container">
+          <div class="footer__grid">
+            <!-- Column 1: Brand + Social -->
+            <div class="footer__col">
+              <h4 style="font-size: 1.5rem; letter-spacing: 2px;">ROSEVOW</h4>
+              <p style="margin-top: 12px;">Premium artificial jewellery that redefines elegance. Every piece is crafted with love and designed to make you shine.</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Pinterest">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Shop -->
+            <div class="footer__col">
+              <h4>Shop</h4>
+              <ul>
+                <li><a href="category.html?cat=rings">Rings</a></li>
+                <li><a href="category.html?cat=necklaces">Necklaces</a></li>
+                <li><a href="category.html?cat=earrings">Earrings</a></li>
+                <li><a href="category.html?cat=bracelets">Bracelets</a></li>
+                <li><a href="category.html?cat=gifts">Gift Sets</a></li>
+                <li><a href="category.html">All Jewellery</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Company -->
+            <div class="footer__col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer__col">
+              <h4>Get in Touch</h4>
+              <ul>
+                <li>📧 hello@rosevow.com</li>
+                <li>📞 +91 6239493835</li>
+                <li>📍 India</li>
+                <li style="margin-top: 16px;">
+                  <a href="https://wa.me/916239493835" class="btn btn--whatsapp btn--sm" target="_blank">💬 Chat on WhatsApp</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container">
+          <p>© 2026 Rosevow. All rights reserved. Made with ♥ in India.</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==================== WHATSAPP FLOAT ==================== -->
+  <a href="https://wa.me/916239493835" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/ui.js"></script>
+
+</body>
+</html>
